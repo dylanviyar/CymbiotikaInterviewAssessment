@@ -1,5 +1,7 @@
+# <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/1e7a079a-b98a-44e5-83e1-5777c2f23915" width = "100"> 
 # Understanding Consumer Cancellation Habits: Exploratory Data Analysis Using Python
-### Author: Dylan Viyar
+### Author: Dylan Viyar 
+
 ### Last Updated: October 17, 2023
 
 Dylan Viyar's Cymbiotika technical assessment. 
@@ -13,7 +15,7 @@ In an effort to understand trends in user cancellations, we can analyze the vari
 ### 1.1 Guiding Questions:
 
 1. What tier was each customer in at the time of their cancellation?
-2. What are some trends in consumer cancellations?
+2. What are some trends in consumer cancellations? (Common cancellation times, length of between cancellations and tier aquisition etc.)
 3. How understanding these trends help Cymbiotika make smarter and more consumer-oriented business decisions?
 
 ### 1.2 The Business Task:
