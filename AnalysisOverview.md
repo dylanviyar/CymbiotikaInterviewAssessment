@@ -111,7 +111,7 @@ Our data seems to be clean and ready for exploration. We can proceed to data ana
 
 # 4. Data Analysis
 
-# 4.0 Environment Setup
+### 4.0 Environment Setup
 
 For our project, we can utilize the json and pandas library to manipulate our data. We also set up datetime to deal with the date values in our dataframe:
 
