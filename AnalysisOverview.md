@@ -122,4 +122,21 @@ import pandas as pd
 import json
 from datetime import datetime
 ```
-### 4.1 
+### 4.1 Code Walkthrough
+
+```python
+# Load JSON data into Pandas DataFrames
+
+with open("customer_tiers.json", "r") as customer_file:
+    customer_tiers_data = json.load(customer_file)
+
+with open("cancellation_data.json", "r") as cancellation_file:
+    cancellation_data = json.load(cancellation_file)
+
+customer_tiers_df = pd.DataFrame(customer_tiers_data)
+cancellation_df = pd.DataFrame(cancellation_data)
+```
+
+We can cast the JSON data into panda dataframes using the pd.DataFrame function.
+
+
