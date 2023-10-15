@@ -222,6 +222,6 @@ One can see that there are more cancellations in August in comparison to Septemb
 
 # 5. Data Visualization
 
-One can utilize Business Intelligence visualization tools such as Tableau to easily understand our findings and better communicate analysis with stakeholders.
+Business Intelligence visualization tools such as Tableau can help us easily understand our findings and better communicate analysis with stakeholders. 
 
 
