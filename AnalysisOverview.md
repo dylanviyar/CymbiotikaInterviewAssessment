@@ -187,3 +187,10 @@ print(canceled_customers_per_tier)
 result_df.to_csv("tiers_of_canceled_customers.csv", index=False)
 ```
 Here, we reconfigure `result_df` to have the columns that are desired, then we utilize the `value_counts()` methos to aggregate the total number of customers per tier, then print the aggregation and save the required dataframe into a CSV file.
+
+
+After running our code, the output is the curation of the `tiers_of_canceled_customers.csv` CSV file and the following dataframe:
+
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/550c028f-9b82-401b-8683-b722455bdba1" width= "300">
+
+
