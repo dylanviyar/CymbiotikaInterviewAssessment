@@ -236,4 +236,18 @@ Utilitizing simple bar graphs, it is easier to understand the habits of our data
 
 ### 6.1 Key Takeaways
 
-- 
+- Tier #1 has the most cancellations
+- August had more cancellation than September
+- Lowest amount of cancellations were in Tier #2 possibly due to customers not wanting to cancel in hope of promotion
+- Tier #4 has the second highest number of cancellations, possibilty because customer's understand that there is no higher tier
+
+### 6.2 Next Steps
+
+Further related analysis can be conducted upon retrieving more data. Some examples of potential additional data exploration include:
+
+1. Yearly Analysis
+   - Determine annual trends of customer tier history and determine if there are certain seasonal patterns to note
+2.   
+   
+
+
