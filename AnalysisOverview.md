@@ -230,4 +230,10 @@ Business Intelligence visualization tools such as Tableau can help us easily und
 
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/6fc5e4f1-8749-4a79-8c7b-7c70f92889c6" width="200">
 
-Utilitizing simple bar graphs, it is easier to understand the habits of our data. The cancellation amount for tier 1 is drastically larger than the rest of the tiers as seen in the first visualization. We can also see that the amount of cancellations in August are slightly larger than the cancellations in September.
+Utilitizing simple bar graphs, it is easier to understand the habits of our data. The cancellation amount for tier 1 is drastically larger than the rest of the tiers, as seen in the first visualization. We can also see that the amount of cancellations in August are slightly larger than the cancellations in September.
+
+# 6. Conclusion
+
+### 6.1 Key Takeaways
+
+- 
