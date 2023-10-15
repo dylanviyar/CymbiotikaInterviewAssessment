@@ -139,4 +139,51 @@ cancellation_df = pd.DataFrame(cancellation_data)
 
 We can cast the JSON data into panda dataframes using the pd.DataFrame function.
 
+```python
+# Load JSON data into Pandas DataFrames
 
+with open("customer_tiers.json", "r") as customer_file:
+    customer_tiers_data = json.load(customer_file)
+
+with open("cancellation_data.json", "r") as cancellation_file:
+    cancellation_data = json.load(cancellation_file)
+
+customer_tiers_df = pd.DataFrame(customer_tiers_data)
+cancellation_df = pd.DataFrame(cancellation_data)
+
+#Create datetime objects
+
+customer_tiers_df['date_earned'] = pd.to_datetime(customer_tiers_df['date_earned'])
+cancellation_df['churn_date'] = pd.to_datetime(cancellation_df['churn_date'])
+```
+
+Here, we are reading in the JSON files and turning those files into panda dataframes. We then cast the columns relevant that contain date values into datetime to make it easier for calculations later on in the analysis.
+
+```python
+#Merge cancellation_df with the customer_tier_df with a left merge on the external_customer_id
+
+merged_df = pd.merge(cancellation_df, customer_tiers_df, on='external_customer_id', how='left')
+```
+This is a crucial step in the code. We want to merge the two dataframes so that we can gain information from both sources in one singular dataframe. Knowing that we need all of the cancellation data (we are counting the total number of cancellations per tier) we merge from the left, with cancellation_df as the left dataframe. This ensures that we have all the cancellation data and the respective customer tier data that corresponds with all the cancellation data. We can utilize the unique identifier `external_customer_id` that is present in both dataframes to merge the two together.
+
+```python
+filtered_df = merged_df[merged_df['date_earned'] <= merged_df['churn_date']]
+
+#Group filtered_df and determine tier closest in time to the churn date
+
+result_df = filtered_df.groupby(['churn_date', 'external_customer_id']).apply(lambda x: x.loc[(x['date_earned'] - x['churn_date']).abs().idxmin()])
+```
+Here, we filter `merged_df` to ensure that there are no rows such that the date in which a customer left is less than the date in which a customer earned a tier. (Such values are irrelevant to the business task.) We then utilize the `groupby()` function to group by the `churn_date` and the `external_customer_id`, effectively creating 
+groups for unique combinations of `churn_date` and `external_customer_id`. We then apply the lambda function to specify a custom operation that is applied to each group of data. The operation we apply finds the smallest difference of the `date_earned` minus the `churn_date`. `idxmin()` then finds the index of the row within each grouping where the difference is the smallest. Finally, `x.loc` is used to locate the row with the smallest time difference within each group and select that row, getting a new dataframe with only the rows that have the smallest time difference between the `date_earned` and the `churn_date`. In the context of the business task, this code creates a dataframe in which all the rows have the tier when the customer cancelled.
+
+```python
+result_df = result_df[['churn_date', 'external_customer_id', 'tier_id', 'tier']]
+
+canceled_customers_per_tier = result_df['tier'].value_counts()
+
+print("Number of canceled customers per tier:")
+print(canceled_customers_per_tier)
+
+result_df.to_csv("tiers_of_canceled_customers.csv", index=False)
+```
+Here, we reconfigure `result_df` to have the columns that are desired, then we utilize the `value_counts()` methos to aggregate the total number of customers per tier, then print the aggregation and save the required dataframe into a CSV file.
