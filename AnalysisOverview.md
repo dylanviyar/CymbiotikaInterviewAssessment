@@ -199,4 +199,25 @@ We see that cancellation tier distribution is the following:
 - Tier #3: 1104 cancellations
 - Tier #4: 1633 cancellations
 
+### 4.2 Additional Analysis
+
+With the provided datasets, one can conduct even further analysis, a natural question is, *When are cancellations most common?* The following process demonstrates how one can find the answer:
+
+```python
+#Adding column with just the month name from the date
+
+result_df['month_name'] = result_df['churn_date'].dt.strftime('%B')
+
+# Group by the 'month_name' column and count cancellations in each month
+cancellations_per_month = result_df.groupby('month_name')['external_customer_id'].count().reset_index()
+
+# Rename the columns for clarity
+cancellations_per_month.columns = ['Month', 'Number_of_Cancellations']
+
+print(cancellations_per_month)
+```
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/fb2ad801-0815-4883-b40e-94ca67304b44" width="250">
+
+One can see that there are more cancellations in August in comparison to September, and if provided more data, one can determine annual trends, if any, in consumer cancellations.
+
 
