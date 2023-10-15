@@ -239,7 +239,7 @@ Utilitizing simple bar graphs, it is easier to understand the habits of our data
 - Tier #1 has the most cancellations
 - August had more cancellation than September
 - Lowest amount of cancellations were in Tier #2 possibly due to customers not wanting to cancel in hope of promotion
-- Tier #4 has the second highest number of cancellations, possibilty because customer's understand that there is no higher tier
+- Tier #4 has the second highest number of cancellations, possibily because customer's understand that there is no higher tier
 
 ### 6.2 Next Steps
 
@@ -247,7 +247,14 @@ Further related analysis can be conducted upon retrieving more data. Some exampl
 
 1. Yearly Analysis
    - Determine annual trends of customer tier history and determine if there are certain seasonal patterns to note
-2.   
+2. Tier History Analysis
+   - Analyze how customer's get promoted/demoted, and various factors that contribute to customer tier status
+3. Geographic Analysis
+   - Determine if a customer's location has an effect on customer retention rate
+
+### Thank you!
+
+Thank you for your time to understand my data analysis and process. Please feel free to reach out with any questions or concerns!
    
 
 
