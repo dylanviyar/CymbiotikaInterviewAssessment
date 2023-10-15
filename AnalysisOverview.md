@@ -220,4 +220,8 @@ print(cancellations_per_month)
 
 One can see that there are more cancellations in August in comparison to September, and if provided more data, one can determine annual trends, if any, in consumer cancellations.
 
+# 5. Data Visualization
+
+One can utilize Business Intelligence visualization tools such as Tableau to easily understand our findings and better communicate analysis with stakeholders.
+
 
