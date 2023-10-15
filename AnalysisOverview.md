@@ -224,4 +224,9 @@ One can see that there are more cancellations in August in comparison to Septemb
 
 Business Intelligence visualization tools such as Tableau can help us easily understand our findings and better communicate analysis with stakeholders. 
 
+![CancellationsPerTierGraph](https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/f2a547a0-6880-4f6f-8774-a0e35251ebd1)
+
+
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/6fc5e4f1-8749-4a79-8c7b-7c70f92889c6" width="200">
+
 
