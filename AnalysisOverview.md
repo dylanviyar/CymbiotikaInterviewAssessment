@@ -227,7 +227,7 @@ We see that Tier #1 has the fastest average time to cancel whereas Tier #2-4 are
 
 # 5. Data Visualization
 
-Business Intelligence visualization tools such as Tableau can help us easily understand our findings and better communicate analysis with stakeholders. 
+Business Intelligence visualization tools such as Tableau can help us easily understand our findings and better communicate analysis with stakeholders. The following graphs were curated with Tableau to view our data.
 
 ![CancellationsPerTierGraph](https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/f2a547a0-6880-4f6f-8774-a0e35251ebd1)
 
