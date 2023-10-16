@@ -137,7 +137,7 @@ customer_tiers_df = pd.DataFrame(customer_tiers_data)
 cancellation_df = pd.DataFrame(cancellation_data)
 ```
 
-We can cast the JSON data into panda dataframes using the pd.DataFrame function.
+We open the files and can cast the JSON data into panda dataframes using the pd.DataFrame function.
 
 ```python
 # Load JSON data into Pandas DataFrames
