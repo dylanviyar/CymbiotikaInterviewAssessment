@@ -237,7 +237,8 @@ Business Intelligence visualization tools such as Tableau can help us easily und
 
 
 Utilitizing simple bar graphs, it is easier to visualize the habits of our data. 
-**Notable trends:**:
+
+**Notable trends:**
 - The cancellation amount for Tier #1 is drastically larger than the rest of the tiers
 - The amount of cancellations in August are slightly larger than the cancellation amounts in September
 - Tier #1 has the lowest average time duration between tier aquisition and cancellation
