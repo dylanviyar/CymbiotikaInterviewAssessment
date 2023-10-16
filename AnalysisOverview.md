@@ -44,7 +44,7 @@ Some **Key Steps** include:
 3. Checking for data type errors (inconsistent/mismatched data types)
 4. Ensuring the data stays relevant to the business task
 
-To get a basic information of the datasets we can use the .info() method:
+To get a basic information of the datasets we can use the .info() method in the python library pandas:
 
 ```python
 import pandas as pd
