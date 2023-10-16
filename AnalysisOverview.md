@@ -189,6 +189,7 @@ We see that cancellation tier distribution is the following:
 With the provided datasets, one can conduct even further analysis. A natural question is, *When are cancellations most common?* The following process demonstrates how one can find the answer:
 
 ```python
+# Finding cancellations per month
 #Adding column with just the month name from the date
 
 result_df['month_name'] = result_df['churn_date'].dt.strftime('%B')
@@ -204,6 +205,25 @@ print(cancellations_per_month)
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/fb2ad801-0815-4883-b40e-94ca67304b44" width="250">
 
 One can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
+
+
+Another avenue of analysis that is possible with the data provided explores the average time it takes to cancel for each tier. This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
+
+```python
+# Finding average days to cancel per tier:
+# Calculate the time difference between achieving a tier and canceling
+
+filtered_df['time_to_cancel'] = (filtered_df['churn_date'] - filtered_df['date_earned']).dt.total_seconds()
+
+# Group filtered_df by tier and calculate the average time to cancel in days for each tier
+average_time_to_cancel_days = (filtered_df.groupby('tier')['time_to_cancel'].mean() / 86400.0).astype(int)  # 86400 seconds in a day
+
+print("Average time to cancel (in days) per tier:")
+print(average_time_to_cancel_days)
+```
+<img src ="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/75feb59d-7949-4e50-b5f7-94b6cd2363f5" width="300">
+
+We see that Tier #1 has the fastest average time to cancel whereas Tier #2-4 are very close in average cancellation turnaround times.
 
 # 5. Data Visualization
 
