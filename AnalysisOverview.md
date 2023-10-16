@@ -142,7 +142,7 @@ customer_tiers_df['date_earned'] = pd.to_datetime(customer_tiers_df['date_earned
 cancellation_df['churn_date'] = pd.to_datetime(cancellation_df['churn_date'])
 ```
 
-To begin, we are reading in the JSON files and turning those files into panda dataframes. We then cast the columns relevant that contain date values into datetime to make it easier for calculations later on in the analysis.
+To begin, we are reading in the JSON files and turning those files into panda dataframes. We then cast the relevant columns that contain date values into datetime to make it easier for calculations later on in the analysis.
 
 ```python
 #Merge cancellation_df with the customer_tier_df with a left merge on the external_customer_id
