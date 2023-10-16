@@ -14,8 +14,8 @@ In an effort to understand trends in user cancellations, we can analyze the vari
 
 ### 1.1 Guiding Questions:
 
-1. What tier was each customer in at the time of their cancellation?
-2. What are some trends in consumer cancellations? (Common cancellation times, length of between cancellations and tier aquisition etc.)
+1. How many cancellations occurred per tier?
+2. What are some trends in consumer cancellations? 
 3. How understanding these trends help Cymbiotika make smarter and more consumer-oriented business decisions?
 
 ### 1.2 The Business Task:
