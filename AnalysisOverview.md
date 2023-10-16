@@ -207,7 +207,7 @@ print(cancellations_per_month)
 One can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
 
 
-Another avenue of analysis that is possible with the data provided explores the average time it takes to cancel for each tier. This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
+Another avenue of analysis that is possible with the data provided explores the average time it takes to cancel after tier aquisition for each tier. This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
 
 ```python
 # Finding average days to cancel per tier:
@@ -233,9 +233,15 @@ Business Intelligence visualization tools such as Tableau can help us easily und
 
 
 
-<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/6fc5e4f1-8749-4a79-8c7b-7c70f92889c6" width="200">
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/6fc5e4f1-8749-4a79-8c7b-7c70f92889c6" width="200">    <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/313829fd-8d4f-48e7-a0ce-e98e58cdc033" width ="600">
 
-Utilitizing simple bar graphs, it is easier to understand the habits of our data. The cancellation amount for tier 1 is drastically larger than the rest of the tiers, as seen in the first visualization. We can also see that the amount of cancellations in August are slightly larger than the cancellation amounts in September.
+
+Utilitizing simple bar graphs, it is easier to visualize the habits of our data. 
+**Notable trends:**:
+- The cancellation amount for Tier #1 is drastically larger than the rest of the tiers
+- The amount of cancellations in August are slightly larger than the cancellation amounts in September
+- Tier #1 has the lowest average time duration between tier aquisition and cancellation
+- Tier #2 and Tier #3 have the same average amount of days between cancellation and earning the tier
 
 # 6. Conclusion
 
@@ -245,6 +251,7 @@ Utilitizing simple bar graphs, it is easier to understand the habits of our data
 - August had more cancellations than September
 - Lowest amount of cancellations were in Tier #2, possibly due to customers not wanting to cancel in hope of tier promotion
 - Tier #4 has the second highest number of cancellations, possibily because customer's understand that there is no higher tier
+- Tier #1 has the fastest average rate of cancellations, possibily suggesting that people are fastest to leave Tier #1 in comparison to the other tiers
 
 ### 6.2 Next Steps
 
