@@ -149,7 +149,7 @@ To begin, we are reading in the JSON files and turning those files into panda da
 
 merged_df = pd.merge(cancellation_df, customer_tiers_df, on='external_customer_id', how='left')
 ```
-This is a crucial step in the code. We want to merge the two dataframes so that we can gain information from both sources in one singular dataframe. Knowing that we need all of the cancellation data (we are counting the total number of cancellations per tier) we merge from the left, with cancellation_df as the left dataframe. This ensures that we have all the cancellation data and the respective customer tier data that corresponds with all the cancellation data. We can utilize the unique identifier `external_customer_id` that is present in both dataframes to merge the two together.
+This is a crucial step in the code. We want to merge the two dataframes so that we can gain information from both sources in one singular dataframe. Knowing that we need all of the cancellation data, (we are counting the total number of cancellations per tier) we merge from the left, with cancellation_df as the left dataframe. This ensures that we have all the cancellation data and the respective customer tier data that corresponds with all the cancellation data. We can utilize the unique identifier `external_customer_id` that is present in both dataframes to merge the two together.
 
 ```python
 filtered_df = merged_df[merged_df['date_earned'] <= merged_df['churn_date']]
@@ -158,8 +158,8 @@ filtered_df = merged_df[merged_df['date_earned'] <= merged_df['churn_date']]
 
 result_df = filtered_df.groupby(['churn_date', 'external_customer_id']).apply(lambda x: x.loc[(x['date_earned'] - x['churn_date']).abs().idxmin()])
 ```
-Here, we filter `merged_df` to ensure that there are no rows such that the date in which a customer left is less than the date in which a customer earned a tier. (Such values are irrelevant to the business task.) We then utilize the `groupby()` function to group by the `churn_date` and the `external_customer_id`, effectively creating 
-groups for unique combinations of `churn_date` and `external_customer_id`. We then apply the lambda function to specify a custom operation that is applied to each group of data. The operation we apply finds the smallest difference of the `date_earned` minus the `churn_date`. `idxmin()` then finds the index of the row within each grouping where the difference is the smallest. Finally, `x.loc` is used to locate the row with the smallest time difference within each group and select that row, getting a new dataframe with only the rows that have the smallest time difference between the `date_earned` and the `churn_date`. In the context of the business task, this code creates a dataframe in which all the rows have the tier when the customer cancelled.
+Here, we filter `merged_df` to ensure that there are no rows such that the date in which a customer canceled is less than the date in which a customer earned a tier. (Such values are irrelevant to the business task.) We then utilize the `groupby()` function to group by the `churn_date` and the `external_customer_id`, effectively creating 
+groups for unique combinations of `churn_date` and `external_customer_id`. We then apply the lambda function to specify a custom operation that is applied to each group of data. The operation we apply finds the smallest difference of the absolute value of `date_earned` minus the `churn_date`. `idxmin()` then finds the index of the row within each grouping where the difference is the smallest. Finally, `x.loc` is used to locate the row with the smallest time difference within each group and select that row, getting a new dataframe with only the rows that have the smallest time difference between the `date_earned` and the `churn_date`. In the context of the business task, this code snippet creates a dataframe in which all the rows have the tier when the customer canceled.
 
 ```python
 result_df = result_df[['churn_date', 'external_customer_id', 'tier_id', 'tier']]
@@ -171,7 +171,7 @@ print(canceled_customers_per_tier)
 
 result_df.to_csv("tiers_of_canceled_customers.csv", index=False)
 ```
-Here, we reconfigure `result_df` to have the columns that are desired, then we utilize the `value_counts()` methos to aggregate the total number of customers per tier, then print the aggregation and save the required dataframe into a CSV file.
+Here, we reconfigure `result_df` to have the columns that are desired, then we utilize the `value_counts()` method to aggregate the total number of customer cancellations per tier, then print the aggregation and save the required dataframe into a CSV file.
 
 
 After running our code, the output is the curation of the `tiers_of_canceled_customers.csv` CSV file and the following dataframe:
@@ -203,7 +203,7 @@ print(cancellations_per_month)
 ```
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/fb2ad801-0815-4883-b40e-94ca67304b44" width="250">
 
-One can see that there are more cancellations in August in comparison to September, and if provided more data, one can determine annual trends, if any, in consumer cancellations.
+One can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
 
 # 5. Data Visualization
 
@@ -215,15 +215,15 @@ Business Intelligence visualization tools such as Tableau can help us easily und
 
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/6fc5e4f1-8749-4a79-8c7b-7c70f92889c6" width="200">
 
-Utilitizing simple bar graphs, it is easier to understand the habits of our data. The cancellation amount for tier 1 is drastically larger than the rest of the tiers, as seen in the first visualization. We can also see that the amount of cancellations in August are slightly larger than the cancellations in September.
+Utilitizing simple bar graphs, it is easier to understand the habits of our data. The cancellation amount for tier 1 is drastically larger than the rest of the tiers, as seen in the first visualization. We can also see that the amount of cancellations in August are slightly larger than the cancellation amounts in September.
 
 # 6. Conclusion
 
 ### 6.1 Key Takeaways
 
 - Tier #1 has the most cancellations
-- August had more cancellation than September
-- Lowest amount of cancellations were in Tier #2 possibly due to customers not wanting to cancel in hope of promotion
+- August had more cancellations than September
+- Lowest amount of cancellations were in Tier #2, possibly due to customers not wanting to cancel in hope of tier promotion
 - Tier #4 has the second highest number of cancellations, possibily because customer's understand that there is no higher tier
 
 ### 6.2 Next Steps
@@ -235,11 +235,11 @@ Further related analysis can be conducted upon retrieving more data. Some exampl
 2. Tier History Analysis
    - Analyze how customer's get promoted/demoted, and various factors that contribute to customer tier status
 3. Geographic Analysis
-   - Determine if a customer's location has an effect on customer retention rate
+   - Determine if a customer's location has an effect on their retention rate
 
 ### Thank you!
 
-Thank you for your time to understand my data analysis and process. Please feel free to reach out with any questions or concerns!
+Thank you for your time to understand my data analysis and process. Please feel free to reach out with any questions or concerns! 
    
 
 
