@@ -135,21 +135,6 @@ with open("cancellation_data.json", "r") as cancellation_file:
 
 customer_tiers_df = pd.DataFrame(customer_tiers_data)
 cancellation_df = pd.DataFrame(cancellation_data)
-```
-
-We open the files and can cast the JSON data into panda dataframes using the pd.DataFrame function.
-
-```python
-# Load JSON data into Pandas DataFrames
-
-with open("customer_tiers.json", "r") as customer_file:
-    customer_tiers_data = json.load(customer_file)
-
-with open("cancellation_data.json", "r") as cancellation_file:
-    cancellation_data = json.load(cancellation_file)
-
-customer_tiers_df = pd.DataFrame(customer_tiers_data)
-cancellation_df = pd.DataFrame(cancellation_data)
 
 #Create datetime objects
 
@@ -157,7 +142,7 @@ customer_tiers_df['date_earned'] = pd.to_datetime(customer_tiers_df['date_earned
 cancellation_df['churn_date'] = pd.to_datetime(cancellation_df['churn_date'])
 ```
 
-Here, we are reading in the JSON files and turning those files into panda dataframes. We then cast the columns relevant that contain date values into datetime to make it easier for calculations later on in the analysis.
+To begin, we are reading in the JSON files and turning those files into panda dataframes. We then cast the columns relevant that contain date values into datetime to make it easier for calculations later on in the analysis.
 
 ```python
 #Merge cancellation_df with the customer_tier_df with a left merge on the external_customer_id
