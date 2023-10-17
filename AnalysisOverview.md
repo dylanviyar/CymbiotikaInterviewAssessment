@@ -175,7 +175,7 @@ After running our code, the output is the curation of the `tiers_of_canceled_cus
 
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/937a9fea-2eef-45d4-be5c-3da2c6e32a61" width="300">
 
-We see that cancellation per tier distribution is the following:
+We see that the cancellation per tier distribution is the following:
 - Tier #1: 5852 cancellations
 - Tier #2: 843 cancellations
 - Tier #3: 1104 cancellations
