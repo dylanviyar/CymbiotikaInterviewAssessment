@@ -147,7 +147,7 @@ To begin, we are reading in the JSON files and turning those files into panda da
 
 merged_df = pd.merge(cancellation_df, customer_tiers_df, on='external_customer_id', how='left')
 ```
-This is a crucial step in the code. We want to merge the two dataframes so that we can gain information from both sources in one singular dataframe. Knowing that we need all of the cancellation data, (we are counting the total number of cancellations per tier) we merge from the left, with `cancellation_df` as the left dataframe. This ensures that we have all the cancellation data and the respective customer tier data that corresponds with all the cancellation data. We can utilize the unique identifier `external_customer_id` that is present in both dataframes to merge the two together.
+This is a crucial step in the code. We want to merge the two dataframes so that we can gain information from both sources in one singular dataframe. Since we need all of the cancellation data (we are counting the total number of cancellations per tier), we merge from the left, with `cancellation_df` as the left dataframe. This ensures that we have all the cancellation data and the respective customer tier data that corresponds with it. We can utilize the unique identifier `external_customer_id` that is present in both dataframes to merge the two together.
 
 ```python
 filtered_df = merged_df[merged_df['date_earned'] <= merged_df['churn_date']]
