@@ -233,7 +233,7 @@ Utilitizing simple bar graphs, it is easier to visualize the habits of our data.
 
 **Notable trends:**
 - The cancellation amount for Tier #1 is drastically larger than the rest of the tiers
-- The amount of cancellations in August are slightly larger than the cancellation amounts in September
+- The amount of cancellations in August is slightly larger than the cancellation amounts in September
 - Tier #1 has the lowest average time duration between tier aquisition and cancellation
 - Tier #2 and Tier #3 have the same average amount of days between cancellation and earning the tier
 
