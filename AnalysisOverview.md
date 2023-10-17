@@ -65,12 +65,11 @@ cancellation_df = pd.DataFrame(cancellation_data)
 print(customer_tiers_df.info())
 print(cancellation_df.info())
 ```
-<img src ="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/cdd8ea5e-86fc-49ec-82c2-5ab3cab35b18" width = "300">
-
+<img src ="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/b8c8b53e-fcb2-497a-b755-6c3bdf557cb5" width="300">
 
 It seems to be the case that there are no null values, however it is best practice to double-check and also ensure that there are no duplicate values that skew our data.
 
-In order to check for duplicate rows, we can utilize the `duplicated()` methos in the pandas library:
+In order to check for duplicate rows, we can utilize the `duplicated()` method in the pandas library:
 
 ```python
 # Data Cleaning
@@ -83,8 +82,7 @@ cancellation_duplicates = cancellation_df[cancellation_df.duplicated(keep='first
 print("Number of Duplicated rows in Cancellation Data:")
 print(cancellation_duplicates)
 ```
-
-<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/9227abb8-606c-495c-861e-9793b381dac8" width = "500">
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/05af15b8-dd94-4d64-a4db-ae6cf9724812" width = "500">
 
 We can see that there are no duplicated rows in our dataset that we have to deal with.
 
@@ -105,8 +103,7 @@ cancellation_null_counts = cancellation_null.sum()
 print("Number of null values in each column:")
 print(cancellation_null_counts)
 ```
-
-<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/81e24234-fa92-417d-bbdd-e18ddd9ddb1d" width= "250">
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/30a9476d-f2a8-4643-ab62-70c6d8fab42d" width="250">
 
 No null values to deal with either! Nice!
 
@@ -177,7 +174,7 @@ Here, we reconfigure `result_df` to have the columns that are desired, then we u
 
 After running our code, the output is the curation of the `tiers_of_canceled_customers.csv` CSV file and the following dataframe:
 
-<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/550c028f-9b82-401b-8683-b722455bdba1" width= "300">
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/937a9fea-2eef-45d4-be5c-3da2c6e32a61" width="300">
 
 We see that cancellation tier distribution is the following:
 - Tier #1: 5852 cancellations
@@ -203,7 +200,7 @@ cancellations_per_month.columns = ['Month', 'Number_of_Cancellations']
 
 print(cancellations_per_month)
 ```
-<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/fb2ad801-0815-4883-b40e-94ca67304b44" width="250">
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/717c03fc-a23f-40c3-a7f8-5725149b02bb" width="250">
 
 One can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
 
@@ -222,7 +219,7 @@ average_time_to_cancel_days = (filtered_df.groupby('tier')['time_to_cancel'].mea
 print("Average time to cancel (in days) per tier:")
 print(average_time_to_cancel_days)
 ```
-<img src ="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/75feb59d-7949-4e50-b5f7-94b6cd2363f5" width="300">
+<img src ="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/9277ae52-8973-40ee-96af-ee04479fdbb3" width="300">
 
 We see that Tier #1 has the fastest average time to cancel whereas Tier #2-4 are very close in average cancellation turnaround times.
 
@@ -230,11 +227,10 @@ We see that Tier #1 has the fastest average time to cancel whereas Tier #2-4 are
 
 Business Intelligence visualization tools such as Tableau can help us easily understand our findings and better communicate analysis with stakeholders. The following graphs were curated with Tableau to view our data.
 
-![CancellationsPerTierGraph](https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/f2a547a0-6880-4f6f-8774-a0e35251ebd1)
+![CancellationsPerTierGraph](https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/3d7fb69e-9243-4de9-94fa-105601040afa)
 
 
-
-<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/6fc5e4f1-8749-4a79-8c7b-7c70f92889c6" width="200">    <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/313829fd-8d4f-48e7-a0ce-e98e58cdc033" width ="600">
+<img src ="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/c8b124c1-41ea-443e-9dc3-92c970059c4f" width="200"> <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/8aa5a757-38b9-4b91-9760-3fbad68621ae" width="600">
 
 
 Utilitizing simple bar graphs, it is easier to visualize the habits of our data. 
