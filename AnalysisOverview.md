@@ -201,8 +201,7 @@ print(cancellations_per_month)
 ```
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/717c03fc-a23f-40c3-a7f8-5725149b02bb" width="250">
 
-We can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
-
+We can see that there are more cancellations in August in comparison to September. If provided more data, the above code can also determine annual trends, if any, in consumer cancellations.
 
 Another avenue of analysis that is possible with the data provided explores the *average time it takes to cancel after tier aquisition for each tier.* This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
 
