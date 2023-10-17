@@ -183,7 +183,7 @@ We see that the cancellation per tier distribution is the following:
 
 ### 4.2 Additional Analysis
 
-With the provided datasets, one can conduct even further analysis. A natural question is *"When are cancellations most common?"* The following process demonstrates how one can find the answer:
+With the provided datasets, we can conduct even further analysis. A natural question is *"When are cancellations most common?"* The following process demonstrates how we can find the answer:
 
 ```python
 # Finding cancellations per month
@@ -201,7 +201,7 @@ print(cancellations_per_month)
 ```
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/717c03fc-a23f-40c3-a7f8-5725149b02bb" width="250">
 
-One can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
+We can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
 
 
 Another avenue of analysis that is possible with the data provided explores the *average time it takes to cancel after tier aquisition for each tier.* This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
