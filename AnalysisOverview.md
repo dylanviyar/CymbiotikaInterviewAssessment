@@ -203,7 +203,7 @@ print(cancellations_per_month)
 
 We can see that there are more cancellations in August in comparison to September. If provided more data, the above code can also determine annual trends, if any, in consumer cancellations.
 
-Another avenue of analysis that is possible with the data provided explores the *average time it takes to cancel after tier aquisition for each tier.* This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
+Another avenue of analysis explores the *average time it takes to cancel after tier aquisition for each tier.* This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
 
 ```python
 # Finding average days to cancel per tier:
