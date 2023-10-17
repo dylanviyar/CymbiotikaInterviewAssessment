@@ -183,7 +183,7 @@ We see that the cancellation per tier distribution is the following:
 
 ### 4.2 Additional Analysis
 
-With the provided datasets, one can conduct even further analysis. A natural question is, *When are cancellations most common?* The following process demonstrates how one can find the answer:
+With the provided datasets, one can conduct even further analysis. A natural question is *"When are cancellations most common?"* The following process demonstrates how one can find the answer:
 
 ```python
 # Finding cancellations per month
