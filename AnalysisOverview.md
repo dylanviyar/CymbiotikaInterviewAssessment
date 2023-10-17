@@ -1,4 +1,5 @@
-# <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/1e7a079a-b98a-44e5-83e1-5777c2f23915" width = "100"> 
+<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/454a3ab8-22b5-4413-a2f9-4a8f2392f177" width ="100">
+
 # Understanding Consumer Cancellation Habits: Exploratory Data Analysis Using Python
 ### Author: Dylan Viyar 
 
