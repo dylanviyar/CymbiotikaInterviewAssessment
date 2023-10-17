@@ -30,7 +30,7 @@ In an effort to understand trends in user cancellations, we can analyze the vari
 1. There are two provided files, `Customer_tiers.json` and `Cancellation_data.json` with information about customer tier aquisition and customer cancellation data, respectively
 2. There will be customers with multiple cancellation dates with the dataset
 3. Tiers ascend 1-4
-4. Tier data will contain promotions and demotions per Customer
+4. Tier data will contain promotions and demotions per customer
 5. The data is stored in JSON data types
 
 # 3. Data Preparation
