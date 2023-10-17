@@ -3,7 +3,7 @@
 # Understanding Consumer Cancellation Habits: Exploratory Data Analysis Using Python
 ### Author: Dylan Viyar 
 
-### Last Updated: October 17, 2023
+### Last Updated: October 16, 2023
 
 Dylan Viyar's Cymbiotika technical assessment. 
 
