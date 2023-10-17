@@ -169,7 +169,7 @@ print(canceled_customers_per_tier)
 
 result_df.to_csv("tiers_of_canceled_customers.csv", index=False)
 ```
-Here, we reconfigure `result_df` to have the columns that are desired, then we utilize the `value_counts()` method to aggregate the total number of customer cancellations per tier, then print the aggregation and save the required dataframe into a CSV file.
+Here, we reconfigure `result_df` to have the desired columns. Then we utilize the `value_counts()` method to aggregate the total number of customer cancellations per tier. Finally, we print the aggregation and save the required dataframe into a CSV file.
 
 After running our code, the output is the curation of the `tiers_of_canceled_customers.csv` CSV file and the following dataframe:
 
