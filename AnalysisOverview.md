@@ -17,7 +17,7 @@ In an effort to understand trends in user cancellations, we can analyze the vari
 
 1. How many cancellations occurred per tier?
 2. What are some trends in consumer cancellations? 
-3. How understanding these trends help Cymbiotika make smarter and more consumer-oriented business decisions?
+3. How can understanding these trends help Cymbiotika make smarter and more consumer-oriented business decisions?
 
 ### 1.2 The Business Task:
 
@@ -35,7 +35,7 @@ In an effort to understand trends in user cancellations, we can analyze the vari
 
 # 3. Data Preparation
 
-#### Before beginning analysis it is crucial to ensure the dataset is relevant, complete and committed to answering our business task.
+#### Before beginning analysis, it is crucial to ensure the dataset is relevant, complete and committed to answering our business task.
 
 ### 3.1 Cleaning our Data
 
@@ -147,7 +147,7 @@ To begin, we are reading in the JSON files and turning those files into panda da
 
 merged_df = pd.merge(cancellation_df, customer_tiers_df, on='external_customer_id', how='left')
 ```
-This is a crucial step in the code. We want to merge the two dataframes so that we can gain information from both sources in one singular dataframe. Knowing that we need all of the cancellation data, (we are counting the total number of cancellations per tier) we merge from the left, with cancellation_df as the left dataframe. This ensures that we have all the cancellation data and the respective customer tier data that corresponds with all the cancellation data. We can utilize the unique identifier `external_customer_id` that is present in both dataframes to merge the two together.
+This is a crucial step in the code. We want to merge the two dataframes so that we can gain information from both sources in one singular dataframe. Knowing that we need all of the cancellation data, (we are counting the total number of cancellations per tier) we merge from the left, with `cancellation_df` as the left dataframe. This ensures that we have all the cancellation data and the respective customer tier data that corresponds with all the cancellation data. We can utilize the unique identifier `external_customer_id` that is present in both dataframes to merge the two together.
 
 ```python
 filtered_df = merged_df[merged_df['date_earned'] <= merged_df['churn_date']]
@@ -171,12 +171,11 @@ result_df.to_csv("tiers_of_canceled_customers.csv", index=False)
 ```
 Here, we reconfigure `result_df` to have the columns that are desired, then we utilize the `value_counts()` method to aggregate the total number of customer cancellations per tier, then print the aggregation and save the required dataframe into a CSV file.
 
-
 After running our code, the output is the curation of the `tiers_of_canceled_customers.csv` CSV file and the following dataframe:
 
 <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/937a9fea-2eef-45d4-be5c-3da2c6e32a61" width="300">
 
-We see that cancellation tier distribution is the following:
+We see that cancellation per tier distribution is the following:
 - Tier #1: 5852 cancellations
 - Tier #2: 843 cancellations
 - Tier #3: 1104 cancellations
@@ -205,7 +204,7 @@ print(cancellations_per_month)
 One can see that there are more cancellations in August in comparison to September, and if provided more data, the provided code can also determine annual trends, if any, in consumer cancellations.
 
 
-Another avenue of analysis that is possible with the data provided explores the average time it takes to cancel after tier aquisition for each tier. This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
+Another avenue of analysis that is possible with the data provided explores the *average time it takes to cancel after tier aquisition for each tier.* This form of analysis can supplement exploration in customer retention habits and trends. The following code can perform the analysis:
 
 ```python
 # Finding average days to cancel per tier:
@@ -229,9 +228,7 @@ Business Intelligence visualization tools such as Tableau can help us easily und
 
 ![CancellationsPerTierGraph](https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/3d7fb69e-9243-4de9-94fa-105601040afa)
 
-
 <img src ="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/c8b124c1-41ea-443e-9dc3-92c970059c4f" width="200"> <img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/8aa5a757-38b9-4b91-9760-3fbad68621ae" width="600">
-
 
 Utilitizing simple bar graphs, it is easier to visualize the habits of our data. 
 
@@ -249,7 +246,7 @@ Utilitizing simple bar graphs, it is easier to visualize the habits of our data.
 - August had more cancellations than September
 - Lowest amount of cancellations were in Tier #2, possibly due to customers not wanting to cancel in hope of tier promotion
 - Tier #4 has the second highest number of cancellations, possibily because customer's understand that there is no higher tier
-- Tier #1 has the fastest average rate of cancellations, possibily suggesting that people are fastest to leave Tier #1 in comparison to the other tiers
+- Tier #1 has the fastest average rate of cancellations, possibily suggesting that people are quickest to cancel Tier #1 in comparison to the other tiers
 
 ### 6.2 Next Steps
 
