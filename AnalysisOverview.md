@@ -254,7 +254,7 @@ Further related analysis can be conducted upon retrieving more data. Some exampl
 1. Yearly Analysis
    - Determine annual trends of customer tier history and determine if there are certain seasonal patterns to note
 2. Tier History Analysis
-   - Analyze how customer's get promoted/demoted, and various factors that contribute to customer tier status
+   - Analyze how customer's get promoted/demoted and various factors that contribute to customer tier status
 3. Geographic Analysis
    - Determine if a customer's location has an effect on their retention rate
 
