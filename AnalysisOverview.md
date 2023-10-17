@@ -244,8 +244,8 @@ Utilitizing simple bar graphs, it is easier to visualize the habits of our data.
 - Tier #1 has the most cancellations
 - August had more cancellations than September
 - Lowest amount of cancellations were in Tier #2, possibly due to customers not wanting to cancel in hope of tier promotion
-- Tier #4 has the second highest number of cancellations, possibily because customer's understand that there is no higher tier
-- Tier #1 has the fastest average rate of cancellations, possibily suggesting that people are quickest to cancel Tier #1 in comparison to the other tiers
+- Tier #4 has the second highest number of cancellations, possibly because customer's understand that there is no higher tier
+- Tier #1 has the fastest average rate of cancellations, possibly suggesting that people are quickest to cancel Tier #1 in comparison to the other tiers
 
 ### 6.2 Next Steps
 
