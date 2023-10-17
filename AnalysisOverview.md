@@ -260,7 +260,7 @@ Further related analysis can be conducted upon retrieving more data. Some exampl
 
 ### Thank you!
 
-Thank you for your time to understand my data analysis and process. Please feel free to reach out with any questions or concerns! 
+Thank you for taking the time to understand my data analysis and process. Please feel free to reach out with any questions or concerns! 
    
 
 
