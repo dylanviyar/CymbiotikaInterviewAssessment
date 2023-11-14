@@ -13,7 +13,7 @@ In an effort to understand trends in user cancellations, we can analyze the vari
 
 1. How many cancellations occurred per tier?
 2. What are some trends in consumer cancellations? 
-3. How can understanding these trends help Cymbiotika make smarter and more consumer-oriented business decisions?
+3. How can understanding these trends help organizations make smarter and more consumer-oriented business decisions?
 
 ### 1.2 The Business Task:
 
