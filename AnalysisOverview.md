@@ -1,11 +1,7 @@
-<img src="https://github.com/dylanviyar/CymbiotikaInterviewAssessment/assets/81194849/454a3ab8-22b5-4413-a2f9-4a8f2392f177" width ="100">
-
 # Understanding Consumer Cancellation Habits: Exploratory Data Analysis Using Python
 ### Author: Dylan Viyar 
 
 ### Last Updated: October 16, 2023
-
-Dylan Viyar's Cymbiotika technical assessment. 
 
 # 1. Background Information
 
