@@ -1,5 +1,9 @@
-# Understanding Consumer Cancellation Habits: Exploratory Data Analysis Using Python
+ <img src ="https://github.com/dylanviyar/PythonChurnDataAnalysis/assets/81194849/9b295b00-fa1d-498a-8611-8283fe148944" width = "100">
+
+# Understanding Consumer Cancellation Habits: Exploratory Data Analysis Using Python  
+
 ### Author: Dylan Viyar 
+
 
 ### Last Updated: October 16, 2023
 
